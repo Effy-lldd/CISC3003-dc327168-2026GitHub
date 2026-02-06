@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio | ZHU YIFEI</title>
+    <link rel="stylesheet" href="css/cisc3003-SugEx02.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 页眉 - 包含导航栏 -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>ZHU YIFEI</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#values">My Values</a></li>
+                <li><a href="#career">Career Aspirations</a></li>
+                <li><a href="#interests">Interests & Hobbies</a></li>
+                <li><a href="#blog">Blog Posts</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 主内容区 -->
+    <main>
+        <!-- Home 板块 -->
+        <section id="home" class="section home-section">
+            <div class="home-content">
+                <h2>Welcome to My Personal Website</h2>
+                <p>Dedicated to Computer Science | Passionate about AI</p>
+                <img src="images/img2.jpg" alt="Professional profile photo" class="home-img">
+            </div>
+        </section>
+
+        <!-- About Me 板块 -->
+        <section id="about" class="section about-section">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hello! I am Zhu Yifei, a junior undergraduate student at the University of Macau, majoring in Computer Science. I have a solid foundation in Python programming, data structures and algorithms, and I am able to combine rigorous academic thinking with practical problem-solving abilities.</p>
+                    <p>I currently work as a research assistant at the Natural Language Processing (NLP) Laboratory of the university, where I participate in the research of relevant projects. These experiences have further honed my skills in neural networks and large language models (LLMs). Meanwhile, I always uphold the concept of lifelong learning and am committed to the continuous improvement of my professional abilities.</p>
+                </div>
+                <div class="about-img-container">
+                	<img src="images/img3.jpg" alt="About me photo" class="about-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- My Values and Beliefs 板块 -->
+        <section id="values" class="section values-section">
+            <h2>My Values and Beliefs</h2>
+            <div class="values-content">
+                <div class="value-card">
+                    <i class="fas fa-shield-alt fa-2x"></i> <!-- 替换为有效图标，原fas fa-integrity不存在 -->
+                    <h3>Integrity</h3>
+                    <p>I believe in honest and ethical work practices, ensuring transparency in all professional interactions.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-leaf fa-2x"></i>
+                    <h3>Continuous Growth</h3>
+                    <p>Learning is a lifelong journey, and I embrace challenges as opportunities to expand my knowledge and skills.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-users fa-2x"></i> <!-- 替换为有效图标，原fas fa-teamwork不存在 -->
+                    <h3>Collaboration</h3>
+                    <p>Strong teams produce exceptional results, and I value diverse perspectives and collective problem-solving.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Career Aspirations 板块（已替换翻译内容） -->
+        <section id="career" class="section career-section">
+            <h2>My Career Aspirations</h2>
+            <div class="career-content">
+                <div class="career-text">
+                    <p>My long-term career goal is to become a senior algorithm engineer in the field of artificial intelligence, and to develop in-depth within the intelligent technology industry. I aim to leverage my professional expertise in machine learning, the application of deep learning frameworks (PyTorch/TensorFlow), and computer vision algorithms to contribute to innovative projects that solve real-world intelligent decision-making problems and drive technological innovation in the industry.</p>
+                    <p>For graduate school applications, I am dedicated to applying for Master's programs in Computer Science (with a focus on Machine Learning) to deepen my knowledge reserve in deep learning and computer vision, and to conduct relevant research on image segmentation algorithms based on Transformer.</p>
+                    <div>Short-term goals include:
+                        <ul>
+                            <li>Secure a graduate school admission with research assistantship</li>
+                            <li>Master advanced application skills by delving deep into advanced PyTorch framework usage, large-scale data processing, and model deployment</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="career-img-container">
+                	<img src="images/img4.jpg" alt="Career aspirations photo" class="career-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- My Interests and Hobbies 板块 -->
+		<section id="interests" class="section interests-section">
+		    <h2>My Interests and Hobbies</h2>
+		    <!-- 外层容器：文字 + 竖版图 横向排列 -->
+		    <div class="interests-top-content">
+		        <div class="interests-text">
+		            <p>Beyond academics and professional development, I enjoy a range of activities that enrich my life and foster well-rounded growth:</p>
+		            <ul>
+		                <li><strong>Technology & Innovation:</strong> Exploring new technologies and experimenting with personal coding projects</li>
+		                <li><strong>Outdoor Activities:</strong> Hiking, cycling, and photography (capturing nature and urban landscapes)</li>
+		                <li><strong>Community Service:</strong> Volunteering at local educational programs to teach coding to youth</li>
+		                <li><strong>Reading:</strong> Non-fiction books on leadership, technology, and personal development</li>
+		                <li><strong>Music:</strong> Playing guitar and attending live music events</li>
+		            </ul>
+		        </div>
+		        <!-- 竖版图片容器：和文字顶部对齐、等高 -->
+		        <div class="ih-vertical-container">
+		            <img src="images/img6.jpg" alt="Hobbies - vertical photo (e.g., guitar playing)" class="ih-vertical-img">
+		        </div>
+		    </div>
+		    <!-- 横版图片容器：单独在下方，整行宽度 -->
+		    <div class="ih-horizontal-container">
+		        <img src="images/img5.jpg" alt="Hobbies - horizontal photo (e.g., hiking landscape)" class="ih-horizontal-img">
+		    </div>
+		</section>
+		
+		<!-- My Blog Posts 板块（已替换翻译内容） -->
+        <section id="blog" class="section blog-section">
+            <h2>My Blog Posts</h2>
+            <div class="blog-content">
+                <div class="blog-card">
+                    <h3>Machine Learning for Beginners: From Theory to Practical Project Implementation</h3>
+                    <p class="blog-date">Published: January 15, 2026</p>
+                    <p>Starting from basic concepts, this article explores the interdisciplinary application of artificial intelligence and environmental science. Combined with practical cases, it explains how to use machine learning models to predict regional air quality changes, and also includes the complete Python code implementation and result analysis.</p>
+                    <a href="#" class="blog-link">Read More</a>
+                </div>
+                <div class="blog-card">
+                    <h3>My First Backend Development Internship: Pitfalls Encountered and Key Takeaways</h3>
+                    <p class="blog-date">Published: December 20, 2025</p>
+                    <p>During my backend development internship at a tech startup, I participated in the iterative optimization of the user data management module. During this period, I encountered issues such as database performance bottlenecks and interface compatibility. This article will share my solution ideas and core takeaways, as well as summarize the essential norms and skills for backend development.</p>
+                    <a href="#" class="blog-link">Read More</a>
+                </div>
+                <div class="blog-card">
+                    <h3>A Complete Guide to Graduate School Applications: Details from School Selection to Personal Statement Writing</h3>
+                    <p class="blog-date">Published: November 5, 2025</p>
+                    <p>Combining my personal application experience, this article provides a detailed step-by-step guide for students who wish to apply for overseas graduate programs in Computer Science, covering school selection and positioning, document preparation, personal statement writing, and interview preparation. It also includes key points for revising personal statements and reminders to avoid common pitfalls.</p>
+                    <a href="#" class="blog-link">Read More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Contact 板块 -->
+        <section id="contact" class="section contact-section">
+            <h2>Contact Me</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> Email: dc32716@umac.mo</p>
+                    <p><i class="fas fa-phone"></i> Phone: (853) 63341146</p>
+                    <p><i class="fas fa-github"></i> GitHub:<br><a href="https://github.com/Effy-lldd/CISC3003-dc327168-2026GitHub">Effy-lldd/CISC3003-dc327168-2026GitHub</a></p>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026  Personal Website.</p>
+            <p>CISC3003 Web Programming - 2026: dc327168 + ZHU YI FEI</p>
+            <div class="footer-links">
+                <a href="#home">Home</a> | 
+                <a href="#about">About</a> | 
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 回到顶部按钮 -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript 用于回到顶部功能 -->
+    <script>
+        // 回到顶部按钮逻辑
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // 平滑滚动导航
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
