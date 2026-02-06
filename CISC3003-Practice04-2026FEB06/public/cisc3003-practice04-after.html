@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CISC3003: Practice 04</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/cisc3003-practice04-sol.css" />
+</head>
+<body>
+    <header>
+        <h1>Share Your Travels</h1>
+        <p>let us know where you've been</p>
+    </header>
+
+    <main>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>PHOTO DETAILS</legend>
+                <table>
+                    <tr>
+                        <td colspan="4">
+                            <label for="title">Title</label><br>
+                            <input type="text" id="title" name="title" placeholder="Give your photo a descriptive name" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <label for="description">Description</label><br>
+                            <textarea id="description" name="description" rows="5" placeholder="Adding a rich description will help with search results"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="col-left">
+                            <div class="col-item">
+                                <label for="continent">Continent</label><br>
+                                <select id="continent" name="continent" required>
+                                    <option value="">Choose continent</option>
+                                    <option value="africa">Africa</option>
+                                    <option value="asia">Asia</option>
+                                    <option value="europe">Europe</option>
+                                    <option value="northamerica">North America</option>
+                                    <option value="southamerica">South America</option>
+                                </select>
+                            </div>
+                            <div class="col-item">
+                                <label for="country">Country</label><br>
+                                <select id="country" name="country" required>
+                                    <option value="">Choose country</option>
+                                    <option value="canada">Canada</option>
+                                    <option value="mexico">Mexico</option>
+                                    <option value="usa">United States</option>
+                                </select>
+                            </div>
+                            <div class="col-item">
+                                <label for="city">City</label><br>
+                                <select id="city" name="city" required>
+                                    <option value="">Choose city</option>
+                                    <option value="calgary">Calgary</option>
+                                    <option value="montreal">Montreal</option>
+                                    <option value="toronto">Toronto</option>
+                                    <option value="vancouver">Vancouver</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td colspan="2" class="col-right">
+                            <div class="dashed-box">
+                                <label>Copyright?</label><br>
+                                <input type="radio" id="copyright-all" name="copyright" value="all">
+                                <label for="copyright-all">All rights reserved</label><br>
+                                <input type="radio" id="copyright-cc" name="copyright" value="cc" checked>
+                                <label for="copyright-cc">Creative Commons</label>
+                            </div>
+                            <div class="dashed-box">
+                                <label>Creative Commons Types</label><br>
+                                <input type="checkbox" id="cc-attribution" name="cc[]">
+                                <label for="cc-attribution">Attribution</label><br>
+                                <input type="checkbox" id="cc-noncommercial" name="cc[]">
+                                <label for="cc-noncommercial">Noncommercial</label><br>
+                                <input type="checkbox" id="cc-noderivatives" name="cc[]">
+                                <label for="cc-noderivatives">No Derivative Works</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="padding: 0;">
+                            <div class="color-bar">
+                                <label for="license">I accept the software license</label>
+                                <input type="checkbox" id="license" name="license" required>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="col-left">
+                            <div class="col-item">
+                                <label for="rate">Rate this photo:</label><br>
+                                <input type="number" id="rate" name="rate" min="1" max="5" style="width: 70px;">
+                            </div>
+                            <div class="col-item">
+                                <label for="color">Color Collection:</label><br>
+                                <input type="color" id="color" name="color" value="#000000">
+                            </div>
+                        </td>
+                        <td colspan="2" class="col-right">
+                            <div class="dashed-box">
+                                <div class="col-item">
+                                    <label for="date">Date Taken:</label><br>
+                                    <input type="date" id="date" name="date" style="width: 140px;">
+                                </div>
+                                <div class="col-item" style="margin-bottom: 0;">
+                                    <label for="time">Time Taken:</label><br>
+                                    <input type="time" id="time" name="time" style="width: 120px;">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="padding: 0;">
+                            <div class="color-bar">
+                                <input type="submit" value="Submit" class="rounded">
+                                <input type="reset" value="Clear Form" class="rounded" style="margin-left: 10px;">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>
