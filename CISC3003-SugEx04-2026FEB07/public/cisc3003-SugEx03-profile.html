@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- 统一改为英文，符合全站语言规范 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio | ZHU YIFEI - Profile</title>
+    <!-- 优先引入common.css，保证样式优先级统一 -->
+    <link rel="stylesheet" href="css/cisc3003-SugEx03-common.css">
+    <link rel="stylesheet" href="css/cisc3003-SugEx03-profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏：保持结构，优化类名/链接格式与其他页面统一 -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>ZHU YIFEI</h1>
+            </div>
+            <ul class="nav-links">
+                <li> <!-- 移除多余的nav-item类，统一其他页面规范 -->
+                    <a href="cisc3003-sugEx03-home.html">Home</a>
+                </li>
+                <li class="dropdown"> <!-- 统一用dropdown类，而非nav-item dropdown -->
+                    <a href="cisc3003-sugEx03-profile.html">Profile</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#values">My Values and Beliefs</a></li>
+                        <li><a href="#career">My Career Aspirations</a></li>
+                        <li><a href="#interests">My Interests and Hobbies</a></li>
+                        <li><a href="#blog">My Blog Posts</a></li>
+                        <li><a href="#contact">My Contact</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="cisc3003-sugEx03-summary.html">Summary</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="cisc3003-sugEx03-summary.html#goals">My Goals and Learning Outcomes</a></li>
+                        <li><a href="cisc3003-sugEx03-summary.html#development">Personal/Professional Development</a></li>
+                        <li><a href="cisc3003-sugEx03-summary.html#reflection">Reflection and Future Directions</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="cisc3003-sugEx03-showcase.html">Showcase</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="cisc3003-sugEx03-showcase.html#log">My Learning Log</a></li>
+                        <li><a href="cisc3003-sugEx03-showcase.html#accomplishments">My Accomplishments</a></li>
+                        <li><a href="cisc3003-sugEx03-showcase.html#sop">My Statement of Purpose</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="cisc3003-sugEx03-qualification.html">Qualification</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="cisc3003-sugEx03-qualification.html#education">My Education</a></li>
+                        <li><a href="cisc3003-sugEx03-qualification.html#work">My Work Experience</a></li>
+                        <li><a href="cisc3003-sugEx03-qualification.html#awards">My Awards</a></li>
+                        <li><a href="cisc3003-sugEx03-qualification.html#services">My Services</a></li>
+                        <li><a href="cisc3003-sugEx03-qualification.html#cv">My CV</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 1. My Values and Beliefs（文字内容不变，仅优化类名对齐规范） -->
+        <section id="values" class="section">
+            <h2>My Values and Beliefs</h2>
+            <div class="values-content">
+                <p>Integrity is the foundation of all my professional and personal interactions. I believe in being honest, transparent, and ethical in every decision I make. Continuous learning is a core value – the tech field evolves rapidly, and I commit to lifelong learning to stay relevant and innovative. Collaboration is key to success; I value diverse perspectives and believe that collective problem-solving yields better results than working in isolation.</p>
+                <p>I also believe in giving back to the community. As I grow in my career, I aim to mentor others and contribute to open-source projects, ensuring that knowledge and opportunities are shared equitably. Finally, I strive for balance – between ambition and well-being, between work and life, to maintain sustainability in my professional journey.</p>
+            </div>
+        </section>
+
+        <!-- 2. My Career Aspirations（文字内容不变） -->
+        <section id="career" class="section">
+            <h2>My Career Aspirations</h2>
+            <div class="career-content">
+                <div class="career-text">
+                    <p>My long-term career goal is to become a senior AI engineer specializing in computer vision and natural language processing. I aim to work at the intersection of research and industry, translating cutting-edge academic research into practical, real-world applications that solve meaningful problems.</p>
+                    <p>In the short term, I plan to pursue a master's degree in Computer Science (Machine Learning track) to deepen my technical expertise. I hope to secure a research assistant position during my studies to gain hands-on experience with advanced AI models and contribute to impactful research projects.</p>
+                    <p>After completing my master's, I aim to join a tech company or research lab where I can work on building scalable AI systems. Ultimately, I want to lead a team of engineers and researchers, driving innovation in AI while fostering a collaborative and inclusive work environment.</p>
+                </div>
+                <div class="career-img-container">
+                    <img src="images/img4.jpg" alt="Career aspirations" class="career-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. My Interests and Hobbies（文字内容不变） -->
+        <section id="interests" class="section">
+            <h2>My Interests and Hobbies</h2>
+            <div class="interests-top-content">
+                <div class="interests-text">
+                    <p>Beyond academics and professional development, I have a diverse range of interests that keep me balanced and inspired. I am an avid hiker and outdoor enthusiast – exploring nature helps me clear my mind and gain perspective on complex problems.</p>
+                    <p>I also enjoy photography, particularly landscape and street photography. This hobby has taught me to see beauty in small details and has improved my visual thinking, which translates well to my work in computer vision. In my free time, I play the guitar and enjoy music production – a creative outlet that complements my analytical work in tech.</p>
+                </div>
+                <div class="ih-vertical-container">
+                    <img src="images/img6.jpg" alt="Hobbies vertical" class="ih-vertical-img">
+                </div>
+            </div>
+            <div class="ih-horizontal-container">
+                <img src="images/img5.jpg" alt="Hobbies horizontal" class="ih-horizontal-img">
+            </div>
+        </section>
+
+        <!-- 4. My Blog Posts（文字内容不变） -->
+        <section id="blog" class="section">
+            <h2>My Blog Posts</h2>
+            <div class="blog-content">
+                <div class="blog-post">
+                    <h3>Getting Started with Machine Learning: A Beginner's Journey</h3>
+                    <p class="blog-date">Published: January 15, 2026</p>
+                    <p>In this post, I share my journey into machine learning, including the resources I used, challenges I faced, and tips for other beginners looking to break into the field. I cover the basics of Python for ML, essential libraries like NumPy and Pandas, and my first project using scikit-learn.</p>
+                    <a href="#" class="blog-link">Read More →</a>
+                </div>
+                <hr>
+                <div class="blog-post">
+                    <h3>My Internship Experience: Working in an NLP Lab</h3>
+                    <p class="blog-date">Published: December 20, 2025</p>
+                    <p>This post details my experience as a research assistant in a natural language processing lab. I discuss the day-to-day work, the technical skills I developed, and the lessons I learned about academic research and teamwork in a professional setting.</p>
+                    <a href="#" class="blog-link">Read More →</a>
+                </div>
+                <hr>
+                <div class="blog-post">
+                    <h3>Applying to Grad School: Tips for CS Master's Programs</h3>
+                    <p class="blog-date">Published: November 5, 2025</p>
+                    <p>In this comprehensive guide, I share my process of applying to graduate programs in computer science. I cover selecting programs, writing a strong statement of purpose, securing recommendation letters, and preparing for interviews.</p>
+                    <a href="#" class="blog-link">Read More →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. My Contact（文字内容不变） -->
+        <section id="contact" class="section">
+            <h2>My Contact</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p>Email: dc32716@umac.mo</p>
+                    <p>Phone: (853) 63341146</p>
+                    <p>GitHub: <a href="https://github.com/Effy-lldd/CISC3003-dc327168-2026GitHub">Effy-lldd/CISC3003-dc327168-2026GitHub</a></p>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚：保持内容，优化样式类名对齐 -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 ZHU YIFEI. All rights reserved.</p>
+            <p>CISC3003 Web Programming - 2026: dc327168 + ZHU YI FEI</p>
+            <div class="footer-links">
+                <a href="cisc3003-sugEx03-home.html">Home</a> | 
+                <a href="cisc3003-sugEx03-profile.html">Profile</a> | 
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 回到顶部按钮：保持样式，优化交互 -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JS：保持逻辑，优化兼容性 -->
+    <script>
+        // 回到顶部按钮 - 优化兼容性
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) { // 替换pageYOffset，提升兼容性
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // 锚点平滑滚动 - 优化事件委托，提升性能
+        document.addEventListener('click', function(e) {
+            if (e.target.matches('a[href^="#"]')) {
+                e.preventDefault();
+                const targetId = e.target.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+
+        // 修复移动端下拉菜单点击问题
+        if (window.innerWidth <= 768) {
+            document.querySelectorAll('.dropdown').forEach(dropdown => {
+                dropdown.addEventListener('click', function(e) {
+                    const menu = this.querySelector('.dropdown-menu');
+                    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        }
+    </script>
+</body>
+</html>
