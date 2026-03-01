@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showcase | ZHU YIFEI</title>
+    <link rel="stylesheet" href="css/cisc3003-IndAssgn-home.css">
+    <link rel="stylesheet" href="css/cisc3003-IndAssgn-mediaqueries.css">
+    <link rel="stylesheet" href="css/cisc3003-IndAssgn-showcase.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 布局补丁：确保内容区适配侧边栏 */
+        body { padding-left: 0; } 
+        @media screen and (min-width: 1200px) {
+            body { padding-left: 100px; } 
+        }
+        main.container { max-width: 1100px; margin: 0 auto; padding-top: 80px; }
+        section { height: auto !important; min-height: fit-content; margin-bottom: 3rem; }
+    </style>
+</head>
+<body>
+    <nav id="sidebar-nav">
+        <div class="sidebar-logo">ZYF</div>
+        <ul class="sidebar-links">
+            <li><a href="cisc3003-IndAssgn-home.html" class="sidebar-link">Home</a></li>
+            <li><a href="cisc3003-IndAssgn-profile.html" class="sidebar-link">Profile</a></li>
+            <li><a href="cisc3003-IndAssgn-qualification.html" class="sidebar-link">Qualification</a></li>
+            <li><a href="cisc3003-IndAssgn-showcase.html" class="sidebar-link">Showcase</a></li>
+            <li><a href="cisc3003-IndAssgn-summary.html" class="sidebar-link">Summary</a></li>
+        </ul>
+    </nav>
+
+    <nav id="desktop-nav">
+        <div class="logo">ZHU YIFEI</div>
+        <div>
+          <ul class="nav-links">
+            <li><a href="#log">Learning Log</a></li>
+            <li><a href="#accomplishments">Accomplishments</a></li>
+            <li><a href="#sop">SOP</a></li>
+          </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <div class="logo">ZHU YIFEI</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#log" onclick="toggleMenu()">Log</a></li>
+                <li><a href="#accomplishments" onclick="toggleMenu()">Accomplishments</a></li>
+                <li><a href="#sop" onclick="toggleMenu()">SOP</a></li>
+                <li><a href="#project-demos" onclick="toggleMenu()">Demos</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="log" class="section">
+            <h2><i class="fas fa-book-open"></i> My Learning Log (CISC3003)</h2>
+            <div class="log-intro">
+                <p>This log records my core learning progress in the CISC3003 Web Programming course (2025-2026 Semester).</p>
+            </div>
+            <div class="table-container">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Week</th>
+                            <th>Core Activity</th>
+                            <th>Key Skills Learned</th>
+                            <th>Outcome</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-row">
+                            <td>W1-W4</td>
+                            <td>Basic Web Development</td>
+                            <td>HTML semantic structure, CSS basic styling, responsive design basics</td>
+                            <td>Completed simple static page development</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td>W5-W8</td>
+                            <td>CSS & JavaScript Enhancement</td>
+                            <td>CSS Flexbox/Grid, DOM manipulation, event listeners</td>
+                            <td>Built responsive navigation bar with interactive effects</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td>W9-W12</td>
+                            <td>Multi-page Website Integration</td>
+                            <td>Cross-page style consistency, relative paths, basic JS interactions</td>
+                            <td>Completed 5 main pages with unified style</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td>W13-W16</td>
+                            <td>Project Polishing & Testing</td>
+                            <td>Bug fixing, cross-browser compatibility, code optimization</td>
+                            <td>Finalized personal portfolio website</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="accomplishments" class="section">
+            <h2><i class="fas fa-trophy"></i> My Accomplishments</h2>
+            <div class="accomplishment-intro">
+                <p>Key awards and practical achievements from my academic journey:</p>
+            </div>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="images/img7.jpg" alt="Award">
+                    <div class="gallery-caption">
+                        <h3>Guangdong-Hong Kong-Macao Greater Bay Area Data Analysis Competition - 2nd Prize</h3>
+                        <p>Completed data analysis project for regional industrial intelligence research (2025)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accomplishment-list">
+                <h3>Key Academic & Practical Achievements</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Completed "Big Data Analysis" Research and Study Activity (University of Macau, 2024)</li>
+                    <li><i class="fas fa-check-circle"></i> Part-time Research Assistant at Tick Intelligent Recognition Algorithm Lab (2025-Present)</li>
+                    <li><i class="fas fa-check-circle"></i> Data Processor at Industrial Intelligence Laboratory (2024)</li>
+                    <li><i class="fas fa-check-circle"></i> Member of Natural Language Analysis Laboratory (University of Macau, 2025-Present)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="sop" class="section">
+            <h2><i class="fas fa-file-alt"></i> My Statement of Purpose</h2>
+            <div class="sop-content">
+                <div class="sop-text">
+                    <h3>Academic & Career Goals</h3>
+                    <p>As a Computer Science undergraduate at the University of Macau (anticipated graduation in 2027), my primary career goal is to secure a position as an IT Support Technician, leveraging my foundational knowledge in programming, data processing, and algorithm implementation.</p>
+                    <p>Through the CISC3003 Web Programming course, I have built practical skills in HTML, CSS, JavaScript and responsive web development, which complement my core computer science knowledge (Data Structures, Algorithms, Object-Oriented Programming). My experience as a research assistant and data processor has further strengthened my ability to handle data analysis, technical documentation, and basic algorithm implementation – key competencies for IT support roles.</p>
+                    <p>Winning the 2nd prize in the Guangdong-Hong Kong-Macao Greater Bay Area Data Analysis Competition has validated my data processing and problem-solving skills, which I aim to apply in IT support scenarios to resolve technical issues efficiently and provide data-driven solutions.</p>
+                    <p>I am committed to continuous learning and practical application of technical skills, and aspire to contribute to the IT support team with my solid foundational knowledge and hands-on experience.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright &#169; 2026 ZHU YIFEI. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

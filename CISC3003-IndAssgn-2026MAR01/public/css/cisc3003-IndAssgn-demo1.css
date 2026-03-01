@@ -1,0 +1,398 @@
+/* 基础设置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 25px 0;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff523b;
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-2 {
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+.col-2 img {
+    max-width: 100%;
+    padding: 50px 0;
+    transition: transform 0.8s ease-in-out;
+}
+
+/* Hero交互 */
+.animate-img:hover img {
+    transform: scale(1.03) rotate(1deg);
+}
+
+.col-2 h1 {
+    font-size: 55px;
+    line-height: 65px;
+    margin: 25px 0;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 10px 35px;
+    margin: 30px 0;
+    border-radius: 50px;
+    transition: 0.4s;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #563434;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 82, 59, 0.3);
+}
+
+.header {
+    background: radial-gradient(#fff, #ffd6d6);
+}
+
+/* 分类区 */
+.categories {
+    margin: 80px 0;
+}
+
+.col-3 {
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.col-3 img {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.col-3:hover img {
+    transform: scale(1.1);
+}
+
+/* 产品卡片 */
+.small-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 25px;
+}
+
+.col-4 {
+    flex-basis: 24%;
+    padding: 15px;
+    min-width: 200px;
+    margin-bottom: 40px;
+    transition: 0.4s;
+    background: #fff;
+    border-radius: 8px;
+}
+
+.col-4:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.col-4 img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.title {
+    text-align: center;
+    margin: 40px auto 70px;
+    position: relative;
+    line-height: 60px;
+    color: #333;
+}
+
+.title::after {
+    content: '';
+    background: #ff523b;
+    width: 60px;
+    height: 4px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h3 {
+    color: #444;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.rating .fa {
+    color: #ff523b;
+    font-size: 13px;
+}
+
+/* 优惠区增强样式 */
+.offer {
+    background: radial-gradient(#fff, #ffd6d6);
+    margin-top: 80px;
+    padding: 40px 0;
+}
+
+.offer-img {
+    padding: 40px;
+    transition: transform 0.5s;
+}
+
+.offer:hover .offer-img {
+    transform: scale(1.05);
+}
+
+.promo-badge {
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.offer-price {
+    color: #ff523b;
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.old-price {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 18px;
+    margin-left: 10px;
+    font-weight: normal;
+}
+
+/* 评价区 (头像-名字-星级-评论) */
+.testimonial {
+    padding-top: 80px;
+}
+
+.testimonial .col-3 {
+    text-align: center;
+    padding: 40px 25px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    background: #fff;
+    border-radius: 12px;
+}
+
+.testimonial .col-3:hover {
+    transform: translateY(-10px);
+    background: #fffafa;
+}
+
+.testimonial .col-3 img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #ff523b;
+    object-fit: cover;
+}
+
+.testimonial .col-3 h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.testimonial .rating {
+    margin-bottom: 15px;
+}
+
+.testimonial p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #777;
+}
+
+/* 品牌区 */
+.brands {
+    margin: 80px auto;
+}
+
+.col-5 img {
+    width: 100%;
+    cursor: pointer;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: 0.4s;
+}
+
+.col-5 img:hover {
+    filter: grayscale(0);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* 页脚 (上一版四列样式) */
+.footer {
+    background: #111;
+    color: #bbb;
+    font-size: 14px;
+    padding: 70px 0 30px;
+}
+
+.footer h3 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4 {
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-col-1 {
+    flex-basis: 30%;
+}
+
+.footer-col-2 {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-col-2 img {
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.footer-col-3, .footer-col-4 {
+    flex-basis: 12%;
+    text-align: center;
+}
+
+.footer ul {
+    list-style-type: none;
+}
+
+.footer ul li {
+    margin-bottom: 5px;
+}
+
+.app-logo {
+    margin-top: 20px;
+}
+
+.app-logo img {
+    width: 140px;
+    margin-right: 10px;
+}
+
+.footer hr {
+    border: none;
+    background: #444;
+    height: 1px;
+    margin: 25px 0;
+}
+
+.copyright {
+    text-align: center;
+}
+
+/* 响应式 */
+.menu-icon {
+    width: 30px;
+    margin-left: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+    nav ul {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+        z-index: 100;
+    }
+    nav ul li {
+        display: block;
+        margin: 15px 50px;
+    }
+    nav ul li a {
+        color: #fff;
+    }
+    .menu-icon {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .row {
+        text-align: center;
+    }
+    .col-2, .col-3, .col-4 {
+        flex-basis: 100%;
+    }
+    .col-2 h1 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+}

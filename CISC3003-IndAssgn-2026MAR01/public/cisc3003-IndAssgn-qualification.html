@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qualification | ZHU YIFEI</title>
+    <link rel="stylesheet" href="css/cisc3003-IndAssgn-home.css">
+    <link rel="stylesheet" href="css/cisc3003-IndAssgn-mediaqueries.css">
+    <link rel="stylesheet" href="css/cisc3003-IndAssgn-qualification.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 布局补丁：确保内容区为左侧边栏留出空间 */
+        body { padding-left: 0; } 
+        @media screen and (min-width: 1200px) {
+            body { padding-left: 100px; } /* 为固定侧边栏留位置 */
+        }
+        main.container { max-width: 1100px; margin: 0 auto; padding-top: 80px; }
+        section { height: auto !important; min-height: fit-content; margin-bottom: 2rem; }
+        .cv-section h2 { border-bottom: 2px solid #3498db; display: inline-block; margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+    <nav id="sidebar-nav">
+        <div class="sidebar-logo">ZYF</div>
+        <ul class="sidebar-links">
+            <li><a href="cisc3003-IndAssgn-home.html" class="sidebar-link">Home</a></li>
+            <li><a href="cisc3003-IndAssgn-profile.html" class="sidebar-link">Profile</a></li>
+            <li><a href="cisc3003-IndAssgn-qualification.html" class="sidebar-link">Qualification</a></li>
+            <li><a href="cisc3003-IndAssgn-showcase.html" class="sidebar-link">Showcase</a></li>
+            <li><a href="cisc3003-IndAssgn-summary.html" class="sidebar-link">Summary</a></li>
+        </ul>
+    </nav>
+
+    <nav id="desktop-nav">
+        <div class="logo">ZHU YIFEI</div>
+        <div>
+          <ul class="nav-links">
+            <li><a href="#education">Education</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#services">Services</a></li>
+          </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <div class="logo">ZHU YIFEI</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#education" onclick="toggleMenu()">Education</a></li>
+                <li><a href="#work" onclick="toggleMenu()">Work</a></li>
+                <li><a href="#awards" onclick="toggleMenu()">Awards</a></li>
+                <li><a href="#services" onclick="toggleMenu()">Services</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="education" class="cv-section">
+            <h2><i class="fas fa-graduation-cap"></i> My Education</h2>
+            <div class="timeline">
+                <div class="item">
+                    <h3>Bachelor of Science in Computer Science</h3>
+                    <p class="subtext">University of Macau | 2023 - 2027 (Anticipated Graduation: May 2027)</p>
+                    <p class="details">
+                        Relevant Courses: Data Structures, Algorithms, Object-Oriented Programming<br>
+                        Academic Focus: Computer Science fundamentals, data processing, algorithm implementation
+                    </p>
+                </div>
+                <div class="item">
+                    <h3>Form 3 Science Graduate</h3>
+                    <p class="subtext">Hefei No.168 Middle School | 2020 - 2023</p>
+                    <p class="details">
+                        Major: Science<br>
+                        Completed secondary education with a focus on science subjects, laying a solid foundation for university study
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="work" class="cv-section">
+            <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
+            <div class="timeline">
+                <div class="item">
+                    <h3>Part-time Research Assistant</h3>
+                    <p class="subtext">Tick Intelligent Recognition Algorithm Research Laboratory, Anhui Provincial Center for Disease Control and Prevention | Feb 2025 - Present</p>
+                    <p class="details">
+                        • Pre-process tick image data with professional tools to improve data quality.<br>
+                        • Assist in implementing basic algorithm models and evaluate algorithm performance indicators.<br>
+                        • Track cutting-edge achievements, conduct literature research, organization and analysis to provide theoretical references.
+                    </p>
+                </div>
+                <div class="item">
+                    <h3>Internship Research Assistant</h3>
+                    <p class="subtext">The National Key Laboratory of Cognitive Intelligence, University of Science and Technology of China | Jun 2025 - Aug 2025</p>
+                    <p class="details">
+                        • Proofread academic papers, standardizing citation formats and logical expression.<br>
+                        • Conduct literature research, organize and analyze core literatures into summaries.<br>
+                        • Participate in building deep learning network architectures and code debugging.<br>
+                        • Design experimental data collection plans, complete data gathering and preliminary verification.
+                    </p>
+                </div>
+                <div class="item">
+                    <h3>Data Processor</h3>
+                    <p class="subtext">Industrial Intelligence Laboratory, Yangtze River Delta Information Intelligence Innovation Institute | May 2024 - Jul 2024</p>
+                    <p class="details">
+                        • Classify and organize industrial data with programming techniques to meet research format requirements.<br>
+                        • Analyze and visualize data, using charts to assist industrial intelligence research.
+                    </p>
+                </div>
+                <div class="item">
+                    <h3>Product Manager Assistant</h3>
+                    <p class="subtext">Anhui Conch Cement Co., Ltd | Nov 2023 - Dec 2023</p>
+                    <p class="details">
+                        • Learn and design the full-process of project factory investigation.<br>
+                        • Analyze and evaluate product functions based on prototype drawings.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="awards" class="cv-section">
+            <h2><i class="fas fa-award"></i> Awards & Honors</h2>
+            <div class="timeline">
+                <div class="item">
+                    <p class="details">No relevant awards or honors at present.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="cv-section">
+            <h2><i class="fas fa-hands-helping"></i> Social Services</h2>
+            <div class="timeline">
+                <div class="item">
+                    <h3>Member of the Natural Language Analysis Laboratory</h3>
+                    <p class="subtext">University of Macau | Feb 2025 - Present</p>
+                    <p class="details">
+                        • Participate in laboratory research activities related to natural language analysis.<br>
+                        • Collaborate with laboratory members to conduct relevant academic research and discussion.
+                    </p>
+                </div>
+                <div class="item">
+                    <h3>Graduate of "Big Data Analysis" Research and Study Activity</h3>
+                    <p class="subtext">Academic Tutoring Program of University of Macau | Feb 2024 - Apr 2024</p>
+                    <p class="details">
+                        • Completed the research and study activity focused on big data analysis.<br>
+                        • Mastered basic big data processing skills and related knowledge through systematic learning.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Copyright &#169; 2026 ZHU YIFEI. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

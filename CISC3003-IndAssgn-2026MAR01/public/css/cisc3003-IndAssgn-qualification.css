@@ -1,0 +1,172 @@
+
+body {
+    padding-left: 7rem; 
+}
+
+
+.cv-section .title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: none; /* 移除旧的下划线以匹配新主页简约风 */
+}
+
+/* 调整容器，使其在有侧边栏的情况下居中 */
+.container {
+    padding: 0 5%;
+    max-width: 1000px;
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 1200px) {
+    body {
+        padding-left: 0;
+    }
+    .cv-section {
+        padding: 20px;
+        margin: 10px;
+    }
+    .cv-section .title {
+        font-size: 1.8rem;
+    }
+}
+
+/* 容器适配，与common.css的10%边距对齐 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10%;
+}
+
+/* 板块样式优化（保持与common.css的一致性） */
+.cv-section {
+    background: white;
+    padding: 50px 40px;
+    margin: 30px auto;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* 板块标题样式（统一图标+文字） */
+.cv-section h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+    display: inline-block;
+}
+
+.cv-section h2 i {
+    color: #3498db;
+    margin-right: 10px;
+}
+
+/* 时间线样式优化 */
+.timeline .item {
+    padding: 25px 20px;
+    border-left: 3px solid #3498db;
+    margin-bottom: 25px;
+    position: relative;
+    background: #f8f9fa;
+    border-radius: 0 8px 8px 0;
+}
+
+/* 时间线节点装饰 */
+.timeline .item::before {
+    content: "";
+    position: absolute;
+    left: -8px;
+    top: 30px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #3498db;
+}
+
+/* 项目标题/子文本/详情样式分层 */
+.timeline .item h3 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.timeline .item .subtext {
+    color: #7f8c8d;
+    font-style: italic;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.timeline .item .details {
+    color: #555;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* 下载按钮样式优化（hover动效+图标） */
+.download-btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background: #2c3e50;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.download-btn i {
+    margin-right: 8px;
+}
+
+.download-btn:hover {
+    background: #3498db;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* 响应式适配（移动端优化） */
+@media (max-width: 768px) {
+    .cv-section {
+        padding: 30px 20px;
+        margin: 20px auto;
+    }
+    
+    .cv-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .timeline .item {
+        padding: 20px 15px;
+    }
+    
+    .download-btn {
+        padding: 12px 25px;
+        font-size: 0.95rem;
+    }
+    
+    /* 导航栏移动端适配（继承common.css，补充） */
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 5%;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    
+    .nav-links > li > a {
+        padding: 15px 10px;
+    }
+    
+    .dropdown-menu {
+        top: 50px;
+        min-width: 180px;
+    }
+}

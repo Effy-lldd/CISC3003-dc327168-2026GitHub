@@ -1,0 +1,266 @@
+
+@media screen and (min-width: 1200px) {
+    body {
+        padding-left: 100px; /* 这里的数值要和侧边栏宽度一致 */
+    }
+    
+    .container {
+        padding: 0 5%;
+        max-width: 1100px;
+    }
+}
+
+
+.section h2 {
+    text-align: center;
+    display: block; /* 改为块级元素以便居中 */
+    border-bottom: none; 
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* 3. 图片高度微调 (原本 800px 在侧边栏布局下可能过高) */
+.gallery-item img {
+    height: 500px; /* 建议改为 500px 左右，视觉比例更协调 */
+    object-fit: cover;
+}
+
+/* 4. 确保表格在小屏幕下可以滑动，不撑破布局 */
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+/* 容器适配，与common.css的10%边距对齐 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10%;
+}
+
+/* 板块基础样式（继承common.css，补充细节） */
+.section {
+    background: white;
+    padding: 50px 40px;
+    margin: 30px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* 板块标题样式（统一图标+文字） */
+.section h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+    display: inline-block;
+}
+
+.section h2 i {
+    color: #3498db;
+    margin-right: 10px;
+}
+
+/* 学习日志补充样式 */
+.log-intro {
+    color: #555;
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.styled-table th {
+    background: #2c3e50; /* 统一主色 */
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.styled-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* 表格行hover效果 */
+.table-row {
+    transition: background-color 0.3s ease;
+}
+
+.table-row:hover {
+    background-color: #f8f9fa;
+}
+
+/* 成就展示样式优化 */
+.accomplishment-intro {
+    color: #555;
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* 画廊布局优化：带描述的卡片式设计 */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.gallery-item {
+    background: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    border-bottom: 2px solid #3498db;
+}
+
+.gallery-caption {
+    padding: 15px 20px;
+}
+
+.gallery-caption h3 {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.gallery-caption p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* 成就列表样式 */
+.accomplishment-list {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.accomplishment-list h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.accomplishment-list ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.accomplishment-list li {
+    padding: 8px 0;
+    color: #555;
+    font-size: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.accomplishment-list li:last-child {
+    border-bottom: none;
+}
+
+.accomplishment-list li i {
+    color: #3498db;
+    margin-right: 10px;
+}
+
+/* 个人陈述样式 */
+.sop-content {
+    margin-top: 20px;
+}
+
+.sop-text {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.sop-text h3 {
+    color: #2c3e50;
+    margin: 20px 0 10px;
+    font-size: 1.3rem;
+}
+
+.sop-text p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* 响应式适配（移动端优化） */
+@media (max-width: 768px) {
+    .section {
+        padding: 30px 20px;
+        margin: 20px auto;
+    }
+    
+    .section h2 {
+        font-size: 1.5rem;
+    }
+    
+    /* 表格响应式：允许横向滚动 */
+    .table-container {
+        overflow-x: auto;
+    }
+    
+    .styled-table th, .styled-table td {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+    
+    /* 画廊适配：单列显示 */
+	.gallery {
+	    grid-template-columns: 1fr;
+	    gap: 20px;
+	}
+	
+	.gallery-item img {
+	    height: 200px;
+	}
+    /* 导航栏移动端适配 */
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 5%;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    
+    .nav-links > li > a {
+        padding: 15px 10px;
+    }
+    
+    .dropdown-menu {
+        top: 50px;
+        min-width: 180px;
+    }
+}

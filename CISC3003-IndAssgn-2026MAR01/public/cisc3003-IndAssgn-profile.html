@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | ZHU YIFEI</title>
+    <link rel="stylesheet" href="css/cisc3003-IndAssgn-home.css">
+    <link rel="stylesheet" href="css/cisc3003-IndAssgn-mediaqueries.css">
+    <link rel="stylesheet" href="css/cisc3003-IndAssgn-profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav id="sidebar-nav">
+        <div class="sidebar-logo">ZYF</div>
+        <ul class="sidebar-links">
+            <li><a href="cisc3003-IndAssgn-home.html" class="sidebar-link">Home</a></li>
+            <li><a href="cisc3003-IndAssgn-profile.html" class="sidebar-link">Profile</a></li>
+            <li><a href="cisc3003-IndAssgn-qualification.html" class="sidebar-link">Qualification</a></li>
+            <li><a href="cisc3003-IndAssgn-showcase.html" class="sidebar-link">Showcase</a></li>
+            <li><a href="cisc3003-IndAssgn-summary.html" class="sidebar-link">Summary</a></li>
+        </ul>
+    </nav>
+
+    <nav id="desktop-nav">
+        <div class="logo">ZHU YIFEI</div>
+        <div>
+          <ul class="nav-links">
+            <li><a href="#values">Values</a></li>
+            <li><a href="#career">Career</a></li>
+            <li><a href="#interests">Interests</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <div class="logo">ZHU YIFEI</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#values" onclick="toggleMenu()">Values</a></li>
+                <li><a href="#career" onclick="toggleMenu()">Career</a></li>
+                <li><a href="#interests" onclick="toggleMenu()">Interests</a></li>
+                <li><a href="#blog" onclick="toggleMenu()">Blog</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <main style="padding: 2rem 0;">
+        <section id="values" class="section">
+            <h2 class="title">My Values and Beliefs</h2>
+            <div class="values-content">
+                <p>Integrity is the foundation of all my professional and personal interactions. I believe in being honest, transparent, and ethical in every decision I make. Continuous learning is a core value – the tech field evolves rapidly, and I commit to lifelong learning to stay relevant and innovative.</p>
+                <p>Collaboration is key to success; I value diverse perspectives and believe that collective problem-solving yields better results than working in isolation.</p>
+            </div>
+        </section>
+
+        <section id="career" class="section">
+            <h2 class="title">My Career Aspirations</h2>
+            <div class="career-content">
+                <div class="career-text">
+                    <p>My long-term career goal is to become a senior AI engineer specializing in NLP. I aim to work at the intersection of research and industry, translating academic research into real-world applications.</p>
+                    <p>In the short term, I plan to pursue a master's degree in Computer Science to deepen my technical expertise.</p>
+                </div>
+                <div class="career-img-container">
+                    <img src="images/img4.jpg" alt="Career" class="career-img">
+                </div>
+            </div>
+        </section>
+
+        <section id="interests" class="section">
+            <h2 class="title">My Interests and Hobbies</h2>
+            <div class="interests-top-content">
+                <div class="interests-text">
+                	<p>Beyond academics and professional development, I have a diverse range of interests that keep me balanced and inspired. I am an avid hiker and outdoor enthusiast – exploring nature helps me clear my mind and gain perspective on complex problems.</p></br>
+                    <p>I also enjoy photography, particularly landscape and street photography. This hobby has taught me to see beauty in small details and has improved my visual thinking, which translates well to my work in computer vision. In my free time, I play the guitar and enjoy music production – a creative outlet that complements my analytical work in tech.</p>
+				</div>
+                <div class="ih-vertical-container">
+                    <img src="images/img6.jpg" alt="Hobbies" class="ih-vertical-img">
+                </div>
+            </div>
+            <div class="ih-horizontal-container">
+                <img src="images/img5.jpg" alt="Hobbies" class="ih-horizontal-img">
+            </div>
+        </section>
+
+        <section id="blog" class="section">
+            <h2 class="title">My Blog Posts</h2>
+            <div class="blog-content">
+                <div class="blog-post">
+                    <h3>Getting Started with Machine Learning</h3>
+                    <p class="blog-date">Published: January 15, 2026</p>
+                    <p>My journey into machine learning, including resources and tips for beginners.</p>
+                    <a href="#" class="blog-link">Read More →</a>
+                </div>
+                <hr>
+                <div class="blog-post">
+                    <h3>My Internship Experience: NLP Lab</h3>
+                    <p class="blog-date">Published: December 20, 2025</p>
+                    <p>Lessons learned about academic research and teamwork in a professional setting.</p>
+                    <a href="#" class="blog-link">Read More →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright &#169; 2026 ZHU YIFEI. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

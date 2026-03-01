@@ -1,0 +1,157 @@
+/* 引入基础样式 */
+@import url("cisc3003-SugEx03-common.css");
+
+/* 1. 核心容器适配：确保与 Showcase 视觉宽度对齐 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%; /* 降低 padding 百分比，增加有效内容宽度 */
+    width: 90%;    /* 统一容器基础宽度 */
+}
+
+/* 2. 侧边栏大屏适配补丁 */
+@media screen and (min-width: 1200px) {
+    body {
+        padding-left: 100px; /* 为左侧侧边栏留出固定空间 */
+    }
+
+    .container {
+        padding: 0 5%;
+        max-width: 1100px; /* 在侧边栏存在时，限制最大宽度防止卡片过长 */
+    }
+}
+
+/* 3. 卡片基础样式 */
+.summary-card {
+    background: white;
+    padding: 50px 40px;
+    margin: 30px auto; /* 居中卡片 */
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s ease;
+    width: 100%; /* 确保卡片填满容器 */
+    box-sizing: border-box;
+}
+
+.summary-card:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* 4. 板块标题样式（对齐新主页风格） */
+.summary-card h2 {
+    color: #2c3e50;
+    font-size: 2.2rem; /* 统一调大标题 */
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+    display: inline-block;
+    text-align: left;
+}
+
+.summary-card h2 i {
+    color: #3498db;
+    margin-right: 12px;
+}
+
+/* 5. 目标网格布局（修正过窄问题） */
+.goals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* 增加最小宽度，防止挤压 */
+    gap: 25px;
+    margin: 20px 0 40px;
+}
+
+.goal-box {
+    padding: 25px;
+    background: #eef2f7;
+    border-left: 5px solid #3498db;
+    border-radius: 0 8px 8px 0;
+}
+
+.goal-box h3 {
+    color: #2c3e50;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.goal-box li {
+    padding: 8px 0;
+    color: #555;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    position: relative;
+    padding-left: 25px;
+}
+
+.goal-box li::before {
+    content: "✓";
+    color: #3498db;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* 6. ILO 学习成果网格 */
+.ilo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.ilo-item {
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+/* 7. PDP 职业发展规划 */
+.timeline-item {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.timeline-item:last-child { border-bottom: none; }
+
+.timeline-item h3 { color: #3498db; margin-bottom: 10px; }
+
+/* 8. 反思板块样式 */
+.modern-quote {
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #7f8c8d;
+    padding: 30px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 30px;
+    border-left: 5px solid #3498db;
+}
+
+.reflection-text p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* 9. 移动端适配 */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 0 15px;
+    }
+    
+    .summary-card {
+        padding: 35px 20px;
+    }
+    
+    .summary-card h2 {
+        font-size: 1.6rem;
+    }
+
+    .goals-grid {
+        grid-template-columns: 1fr;
+    }
+}
