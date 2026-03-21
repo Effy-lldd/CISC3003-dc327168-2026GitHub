@@ -1,0 +1,47 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.header {
+  background-color: v.$white;
+
+  &__logo {
+    img {
+      width: 8.8125rem; // 141px
+      height: 1.375rem; // 22px
+    }
+  }
+
+  &__links {
+    a {
+      position: relative;
+      font-size: 0.875rem;
+      color: v.$grayishBlue;
+      transition: color 300ms ease-in-out;
+
+      &:not(:last-child) {
+        margin-right: 32px;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 5px;
+        left: 0;
+        right: 0;
+        bottom: -30px; // 线条距文字底部的绝对距离
+        background: linear-gradient(to right, v.$limeGreen, v.$brightCyan);
+        opacity: 0;
+        transition: opacity 300ms ease-in-out;
+      }
+
+      &:hover {
+        color: v.$darkBlue;
+
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
