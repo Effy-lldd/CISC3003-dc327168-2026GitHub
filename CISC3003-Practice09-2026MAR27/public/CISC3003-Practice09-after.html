@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CISC3003 Practice 09</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/styles-sol.css">
+    
+</head>
+<body>
+    <!-- 整体布局核心容器：必须和CSS的.app-container对应 -->
+    <div class="app-container">
+
+        <!-- 左侧侧边栏：对应CSS的.sidebar -->
+        <aside class="sidebar">
+            <!-- 个人信息区 -->
+            <div class="profile">
+                <img src="images/profile.jpg" alt="John Locke" class="avatar">
+                <h2 class="username">John Locke</h2>
+                <p class="user-email">johnlocke@example.com</p>
+            </div>
+
+            <!-- 侧边栏导航菜单 -->
+			<nav class="nav-menu">
+			    <a href="#" class="nav-item">
+			        <i class="material-icons" role="presentation">dashboard</i> Dashboard
+			    </a>
+			    <a href="#" class="nav-item">
+			        <i class="material-icons" role="presentation">message</i> Messages
+			    </a>
+			    <a href="#" class="nav-item">
+			        <i class="material-icons" role="presentation">event</i> Tasks
+			    </a>
+			    <a href="#" class="nav-item">
+			        <i class="material-icons" role="presentation">call</i> Orders
+			    </a>
+			    <a href="#" class="nav-item">
+			        <i class="material-icons" role="presentation">settings</i> Configure
+			    </a>
+			    <a href="#" class="nav-item">
+			        <i class="material-icons" role="presentation">view_list</i> Catalog
+			    </a>
+			    <a href="#" class="nav-item">
+			        <i class="material-icons" role="presentation">contacts</i> Customers
+			    </a>
+			    <a href="#" class="nav-item">
+			        <i class="material-icons" role="presentation">insert_chart</i> Analytics
+			    </a>                               
+			</nav>
+        </aside>
+
+        <!-- 右侧主内容区：对应CSS的.main-content -->
+        <main class="main-content">
+           <!-- 顶部导航栏 -->
+			<header class="top-header">
+			    <h1 class="mdl-layout-title">CRM <span>Admin</span></h1>
+			    <div class="header-actions">
+			        <div class="icon-badge">
+			            <i class="material-icons header-icon">account_box</i>
+			            <span class="badge">5</span>
+			        </div>
+			        <div class="icon-badge">
+			            <i class="material-icons header-icon">notifications</i>
+			            <span class="badge">4</span>
+			        </div>
+			        <i class="material-icons header-icon">search</i>
+			    </div>
+			</header>
+
+            <!-- 内容标题区 -->
+            <div class="content-header">
+                <h4>Order Summaries</h4>
+                <p>Examine your customer orders</p>
+            </div>
+
+            <!-- 双卡片容器 -->
+            <div class="cards-container">
+                <!-- 左侧：My Orders 卡片 -->
+                <div class="card card-orders">
+                    <div class="card-header">
+                        <h4>My Orders</h4>
+                    </div>
+                    <div class="card-content">
+                        <ul class="order-list">
+                            <li class="order-item"><a href="#">Order #500</a></li>
+                            <li class="order-item"><a href="#">Order #510</a></li>
+                            <li class="order-item"><a href="#">Order #520</a></li>
+                            <li class="order-item"><a href="#">Order #530</a></li>
+                            <li class="order-item"><a href="#">Order #540</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 右侧：订单详情卡片 -->
+                <div class="card card-order-detail">
+                    <div class="card-header">
+                        <h4>Selected Order: #520</h4>
+                    </div>
+                    <div class="card-content">
+                        <p class="customer-info">Customer: Mount Royal University</p>
+                        
+                        <!-- 订单表格 -->
+                        <table class="order-table">
+                            <thead>
+                                <tr>
+                                    <th>Cover</th>
+                                    <th>Title</th>
+                                    <th class="text-right">Quantity</th>
+                                    <th class="text-right">Price</th>
+                                    <th class="text-right">Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><img src="images/books/tinysquare/0205886159.jpg" alt="Book Cover" class="product-cover"></td>
+                                    <td>Global Issues, Local Arguments</td>
+                                    <td class="text-right">25</td>
+                                    <td class="text-right">$10.00</td>
+                                    <td class="text-right">$250.00</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/books/tinysquare/0205875548.jpg" alt="Book Cover" class="product-cover"></td>
+                                    <td>The Prentice Hall Guide for College Writers</td>
+                                    <td class="text-right">50</td>
+                                    <td class="text-right">$50.00</td>
+                                    <td class="text-right">$2500.00</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/books/tinysquare/0321826035.jpg" alt="Book Cover" class="product-cover"></td>
+                                    <td>Introductory and Intermediate Algebra 5e</td>
+                                    <td class="text-right">40</td>
+                                    <td class="text-right">$35.00</td>
+                                    <td class="text-right">$1400.00</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/books/tinysquare/0205902278.jpg" alt="Book Cover" class="product-cover"></td>
+                                    <td>Literature and the Writing Process</td>
+                                    <td class="text-right">300</td>
+                                    <td class="text-right">$20.00</td>
+                                    <td class="text-right">$7500.00</td>
+                                </tr>
+                                <!-- 合计行 -->
+                                <tr>
+                                    <td colspan="4" class="text-right totals">Subtotal</td>
+                                    <td class="text-right totals">$11650.00</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" class="text-right totals">Shipping</td>
+                                    <td class="text-right totals">$100.00</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" class="text-right grandtotals">Grand Total</td>
+                                    <td class="text-right grandtotals">$12650.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
