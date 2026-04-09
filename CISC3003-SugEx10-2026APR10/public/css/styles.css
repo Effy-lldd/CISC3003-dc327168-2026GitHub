@@ -1,0 +1,96 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.mdl-layout {
+  height: 100% !important;
+}
+.mdl-layout__drawer {
+  height: 100% !important;
+  position: fixed !important;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+.mdl-layout__content {
+  height: 100% !important;
+  overflow-y: auto;
+  margin-left: 240px;
+}
+
+header h1.mdl-layout-title {
+    font-size: 32px;
+    color: white;
+}
+header h1 span {
+    color: #ff6e40;
+}
+
+.profile {
+    background-color: #263238;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 10px;
+    text-align: center;
+}
+.profile .avatar {
+    margin: 0 auto 15px;
+}
+.profile h2, .profile p {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;  
+    border-radius: 50%;
+    
+    display: block;
+}
+
+.page-content {
+  margin: 10px;   
+}
+
+main header {
+    margin: 0;
+    min-height: 40px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+main header h4 {
+  margin: 0; 
+    
+    font-size: 18px;
+}
+
+
+.card-lesson {
+  min-width: 200px;
+  min-height: 100px;
+}
+.card-lesson > .mdl-card__actions {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+}
+.card-lesson > .mdl-card__title {
+  align-items: flex-start;
+}
+.card-lesson > .mdl-card__title > h4 {
+  margin-top: 0;
+}
+.card-lesson > .mdl-card__title, .card-lesson > .mdl-card__supporting-text, .card-lesson > .mdl-card__actions, .card-lesson > .mdl-card__actions > .mdl-button {
+  _color: #fff;
+}
+
+
+.inlinesparkline  {width: 70%;}
