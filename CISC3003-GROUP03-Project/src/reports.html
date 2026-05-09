@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - Finomic</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/app-layout.css">
+    <link rel="stylesheet" href="css/reports.css">
+    <script type="module">
+    import './js/pages/auth-guard.js';
+    import './js/pages/sidebar.js';
+    import './js/pages/reports.js';
+</script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Include Sidebar -->
+        <div id="sidebar-container"></div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="page-header">
+                <h2>Financial Reports</h2>
+                <p>Track your financial trends over time</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <svg class="icon green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                        <p>Total Income</p>
+                    </div>
+                    <h3 class="green" id="report-total-income">$0.00</h3>
+                    <p class="stat-info">All time</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <svg class="icon red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"></polyline><polyline points="17 18 23 18 23 12"></polyline></svg>
+                        <p>Total Expenses</p>
+                    </div>
+                    <h3 class="red" id="report-total-expenses">$0.00</h3>
+                    <p class="stat-info">All time</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <svg class="icon teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                        <p>Net Savings</p>
+                    </div>
+                    <h3 id="net-savings">$0.00</h3>
+                    <p class="stat-info" id="net-savings-status">Positive balance</p>
+                </div>
+            </div>
+
+            <!-- Bar Chart -->
+            <div class="card" id="chart-card" style="display:none;">
+                <h4>Monthly Trend</h4>
+                <div id="chart-container" class="chart-container"></div>
+                <div class="chart-legend">
+                    <div class="legend-item"><div class="legend-color green-bg"></div><span>Income</span></div>
+                    <div class="legend-item"><div class="legend-color red-bg"></div><span>Expenses</span></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h4>Monthly Breakdown</h4>
+                <div class="table-container">
+                    <table class="transactions-table">
+                        <thead>
+                            <tr>
+                                <th>Month</th>
+                                <th class="text-right">Income</th>
+                                <th class="text-right">Expenses</th>
+                                <th class="text-right">Net</th>
+                                <th class="text-right">Savings Rate</th>
+                            </tr>
+                        </thead>
+                        <tbody id="monthly-table-body"></tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Page Footer -->
+            <footer class="page-footer">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h4>CISC3003 Web Programming</h4>
+                        <p>Financial Assistant Dashboard - Group 03</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Team Members</h4>
+                        <p>Tatiana Muniz Rodriguez (DC027021) • Diogo Barros (DC328252) • Diana (DC325411) • Effy (DC327168) • Edith (DC328581)</p>
+                    </div>
+                    <div class="footer-section">
+                        <p class="footer-copy">© 2026 Finomic. All rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
+
+        </main>
+    </div>
+
+</body>
+</html>

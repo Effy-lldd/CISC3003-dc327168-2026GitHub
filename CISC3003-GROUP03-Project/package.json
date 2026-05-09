@@ -1,0 +1,25 @@
+{
+  "name": "cisc3003-group03-project",
+  "version": "1.0.0",
+  "description": "**CISC3003 Web Programming - Group 03**",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bomboclatwarrior/CISC3003-GROUP03-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bomboclatwarrior/CISC3003-GROUP03-Project/issues"
+  },
+  "homepage": "https://github.com/bomboclatwarrior/CISC3003-GROUP03-Project#readme",
+  "devDependencies": {
+    "vite": "^8.0.8"
+  }
+}
