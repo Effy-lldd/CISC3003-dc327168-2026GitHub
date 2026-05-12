@@ -44,7 +44,7 @@
 
     <!-- Exam Required Footer -->
     <footer>
-        CISC3003 Web Programming: Your Name + Your Student ID + 2026
+        CISC3003 Web Programming: ZHU YI FEI + DC327168 + 2026
     </footer>
 </body>
 </html>
