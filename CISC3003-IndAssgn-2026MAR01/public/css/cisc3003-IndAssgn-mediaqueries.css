@@ -1,0 +1,299 @@
+
+/* 容器适配，与common.css的10%边距对齐 */
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* 卡片样式优化（继承common.css，增强层次感） */
+.summary-card {
+    background: white;
+    padding: 50px 40px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.summary-card:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* 板块标题样式（统一图标+文字） */
+.summary-card h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+    display: inline-block;
+}
+
+.summary-card h2 i {
+    color: #3498db;
+    margin-right: 10px;
+}
+
+/* 目标板块补充样式 */
+.goals-intro {
+    color: #555;
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.goals-grid {
+    display: flex;
+    gap: 25px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.goal-box {
+    flex: 1;
+    min-width: 300px;
+    padding: 25px;
+    background: #eef2f7;
+    border-left: 5px solid #3498db;
+    border-radius: 0 8px 8px 0;
+}
+
+.goal-box h3 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.goal-box h3 i {
+    color: #3498db;
+    margin-right: 8px;
+}
+
+.goal-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.goal-box li {
+    padding: 8px 0;
+    color: #555;
+    font-size: 1rem;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    padding-left: 20px;
+}
+
+.goal-box li:last-child {
+    border-bottom: none;
+}
+
+.goal-box li::before {
+    content: "✓";
+    color: #3498db;
+    position: absolute;
+    left: 0;
+}
+
+/* ILO板块样式 */
+.ilo-section {
+    margin-top: 40px;
+}
+
+.ilo-section h3 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.ilo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.ilo-item {
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.ilo-item h4 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.ilo-item p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* 职业发展规划样式 */
+.pdp-content {
+    color: #555;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.pdp-content > p {
+    margin-bottom: 30px;
+}
+
+.pdp-timeline {
+    margin-bottom: 40px;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.timeline-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.timeline-item h3 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.timeline-item ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.timeline-item li {
+    padding: 6px 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+.timeline-item li::before {
+    content: "•";
+    color: #3498db;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+.pdp-resources h3 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.pdp-resources ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.pdp-resources li {
+    padding: 6px 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+.pdp-resources li::before {
+    content: "📚";
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+/* 反思板块样式 */
+.reflection-content {
+    color: #555;
+    line-height: 1.7;
+}
+
+.modern-quote {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #7f8c8d;
+    padding: 30px 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 30px;
+    border-left: 5px solid #3498db;
+}
+
+.reflection-text h3 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin: 25px 0 15px;
+}
+
+.reflection-text p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* 响应式适配（移动端优化） */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+    
+    .summary-card {
+        padding: 30px 20px;
+        margin-bottom: 20px;
+    }
+    
+    .summary-card h2 {
+        font-size: 1.5rem;
+    }
+    
+    .goals-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .goal-box {
+        min-width: 100%;
+    }
+    
+    .ilo-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modern-quote {
+        font-size: 1.2rem;
+        padding: 20px 15px;
+    }
+    
+    /* 导航栏移动端适配 */
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 5%;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    
+    .nav-links > li > a {
+        padding: 15px 10px;
+    }
+    
+    .dropdown-menu {
+        top: 50px;
+        min-width: 180px;
+    }
+}

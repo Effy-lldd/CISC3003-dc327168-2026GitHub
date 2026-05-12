@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedStore | Premium Sports e-Commerce</title>
+    <link rel="stylesheet" href="css/cisc3003-IndAssgn-demo1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="header" id="home">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" width="135" alt="RedStore Logo">
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#categories">Shop</a></li>
+                    <li><a href="#latest">Latest</a></li>
+                    <li><a href="#offer">Deals</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <img src="images/cart.png" alt="cart" width="30" height="30">
+                <img src="images/menu.png" alt="menu" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+        <div class="row hero-row">
+            <div class="col-2">
+                <h1>Redefine Your<br>Active Lifestyle</h1>
+                <p>Excellence is not a destination; it's a continuous journey. <br>Equip yourself with the best gear to conquer every milestone.</p>
+                <a href="#categories" class="btn">Explore Collections &#8594;</a>
+            </div>
+            <div class="col-2 animate-img">
+                <img src="images/image1.png" alt="Hero Athlete">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="categories" id="categories">
+    <div class="small-container">
+        <h2 class="title">Shop by Category</h2>
+        <div class="row">
+            <div class="col-3 hover-effect">
+                <img src="images/category-1.jpg" alt="Footwear">
+            </div>
+            <div class="col-3 hover-effect">
+                <img src="images/category-2.jpg" alt="Apparel">
+            </div>
+            <div class="col-3 hover-effect">
+                <img src="images/category-3.jpg" alt="Accessories">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="small-container" id="featured">
+    <h2 class="title">Our Bestsellers</h2>
+    <div class="row">
+        <div class="col-4">
+            <div class="img-wrapper"><img src="images/product-1.jpg" alt="T-Shirt"></div>
+            <h3>Classic Crimson Training Tee</h3>
+            <div class="rating">
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+            </div>
+            <p>$48.00</p>
+        </div>
+        <div class="col-4">
+            <div class="img-wrapper"><img src="images/product-2.jpg" alt="Shoes"></div>
+            <h3>Black Stealth Run Shoes</h3>
+            <div class="rating">
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i>
+            </div>
+            <p>$115.00</p>
+        </div>
+        <div class="col-4">
+            <div class="img-wrapper"><img src="images/product-3.jpg" alt="Pants"></div>
+            <h3>Flex-Fit Training Joggers</h3>
+            <div class="rating">
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i>
+            </div>
+            <p>$62.00</p>
+        </div>
+        <div class="col-4">
+            <div class="img-wrapper"><img src="images/product-4.jpg" alt="Polo"></div>
+            <h3>Midnight Blue Sport Polo</h3>
+            <div class="rating">
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+            </div>
+            <p>$54.00</p>
+        </div>
+    </div>
+
+    <h2 class="title" id="latest">Latest Collections</h2>
+    <div class="row">
+        <div class="col-4">
+            <img src="images/product-5.jpg" alt="Product">
+            <h3>Urban Explorer Grey High-Tops</h3>
+            <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></div>
+            <p>$135.00</p>
+        </div>
+        <div class="col-4">
+            <img src="images/product-8.jpg" alt="Product">
+            <h3>Fossil Stealth Edition Watch</h3>
+            <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></div>
+            <p>$195.00</p>
+        </div>
+        <div class="col-4">
+            <img src="images/product-9.jpg" alt="Product">
+            <h3>Modernist Analogue Sport Watch</h3>
+            <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></div>
+            <p>$180.00</p>
+        </div>
+        <div class="col-4">
+            <img src="images/product-10.jpg" alt="Product">
+            <h3>X-Speed Velocity Trainers</h3>
+            <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></div>
+            <p>$95.00</p>
+        </div>
+    </div>
+</div>
+
+<div class="offer" id="offer">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/exclusive.png" alt="Smart Band" class="offer-img">
+            </div>
+            <div class="col-2">
+                <p class="promo-badge">HOT SALE - 50% OFF</p>
+                <h1>Mi Smart Band 4</h1>
+                <h2 class="offer-price">Now Only $25.00 <span class="old-price">$50.00</span></h2>
+                <small>Experience the next level of fitness tracking with a 39.9% larger AMOLED color display. Water-resistant up to 50m with 20 days of battery life.</small>
+                <br>
+                <a href="" class="btn">Pre-order Now &#8594;</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="testimonial" id="testimonials">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-3 card">
+                <img src="images/user-1.png" alt="User">
+                <h3>Sarah Jenkins</h3>
+                <div class="rating">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                </div>
+                <p>The quality of the training gear is unmatched. It feels like a second skin during my heavy workout sessions.</p>
+            </div>
+            <div class="col-3 card">
+                <img src="images/user-2.png" alt="User">
+                <h3>David Miller</h3>
+                <div class="rating">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i>
+                </div>
+                <p>Fast delivery and premium packaging. The Smart Band 4 is exactly what I needed for my marathon prep.</p>
+            </div>
+            <div class="col-3 card">
+                <img src="images/user-3.png" alt="User">
+                <h3>Elena Rodriguez</h3>
+                <div class="rating">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+                </div>
+                <p>Best customer support I've ever experienced. They helped me find the perfect shoe size in minutes!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="brands">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-5"><img src="images/logo-godrej.png" alt="Brand"></div>
+            <div class="col-5"><img src="images/logo-oppo.png" alt="Brand"></div>
+            <div class="col-5"><img src="images/logo-coca-cola.png" alt="Brand"></div>
+            <div class="col-5"><img src="images/logo-paypal.png" alt="Brand"></div>
+            <div class="col-5"><img src="images/logo-philips.png" alt="Brand"></div>
+        </div>
+    </div>
+</div>
+
+<div class="footer" id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and iOS mobile phone.</p>
+                <div class="app-logo">
+                    <img src="images/play-store.png" alt="Google Play">
+                    <img src="images/app-store.png" alt="App Store">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="images/logo-white.png" alt="Logo White">
+                <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">CISC3003 Web Programming - 2026： dc327168 + ZHU YI FEI</p>
+    </div>
+</div>
+
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight = "0px";
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px") {
+            MenuItems.style.maxHeight = "200px";
+        } else {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+</script>
+</body>
+</html>

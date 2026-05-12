@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | ZHU YIFEI</title>
+    <!-- 优先引入common.css，保证样式优先级统一 -->
+    <link rel="stylesheet" href="css/cisc3003-SugEx03-common.css">
+    <link rel="stylesheet" href="css/cisc3003-SugEx03-home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><h1>ZHU YIFEI</h1></div>
+            <ul class="nav-links">
+                <li> <!-- Home无下拉菜单，移除多余的dropdown类 -->
+                    <a href="cisc3003-sugEx03-home.html">Home</a>
+                </li>
+                <li class="dropdown">
+                    <!-- 修复链接拼写错误：sugex03 → sugEx03，统一大小写规范 -->
+                    <a href="cisc3003-sugEx03-profile.html">Profile</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="cisc3003-sugEx03-profile.html#values">Values & Beliefs</a></li>
+                        <li><a href="cisc3003-sugEx03-profile.html#career">Career Aspirations</a></li>
+                        <li><a href="cisc3003-sugEx03-profile.html#interests">Interests</a></li>
+                        <li><a href="cisc3003-sugEx03-profile.html#blog">Blog Posts</a></li>
+                        <li><a href="cisc3003-sugEx03-profile.html#contact">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="cisc3003-sugEx03-summary.html">Summary</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="cisc3003-sugEx03-summary.html#goals">Goals & ILOs</a></li>
+                        <li><a href="cisc3003-sugEx03-summary.html#pdp">PDP Planning</a></li>
+                        <li><a href="cisc3003-sugEx03-summary.html#reflection">Reflection</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="cisc3003-sugEx03-showcase.html">Showcase</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="cisc3003-sugEx03-showcase.html#log">Learning Log</a></li>
+                        <li><a href="cisc3003-sugEx03-showcase.html#accomplishments">Accomplishments</a></li>
+                        <li><a href="cisc3003-sugEx03-showcase.html#sop">Statement of Purpose</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="cisc3003-sugEx03-qualification.html">Qualification</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="cisc3003-sugEx03-qualification.html#education">Education</a></li>
+                        <li><a href="cisc3003-sugEx03-qualification.html#work">Work Experience</a></li>
+                        <li><a href="cisc3003-sugEx03-qualification.html#cv">My CV</a></li>
+                    </ul>
+                </li>
+                
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home板块：内容不变，优化类名对齐 -->
+        <section id="home" class="section home-section">
+            <div class="home-content">
+                <h2>Welcome to My Personal Website</h2>
+                <p>Computer Science Student | NLP Research Assistant</p>
+                <img src="images/img2.jpg" alt="Profile" class="home-img">
+            </div>
+        </section>
+
+        <!-- About板块：内容不变 -->
+        <section id="about" class="section about-section">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hello! I am Zhu Yifei, a junior undergraduate student at the University of Macau, majoring in Computer Science. I have a solid foundation in Python programming, data structures, and algorithms.</p>
+                    <p>I currently work as a research assistant at the NLP Laboratory, honing my skills in neural networks and large language models (LLMs).</p>
+                </div>
+                <div class="about-img-container">
+                    <img src="images/img3.jpg" alt="About" class="about-img">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚：补充完整结构，与其他页面统一 -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 ZHU YIFEI. All rights reserved.</p>
+            <p>CISC3003 Web Programming - 2026: dc327168 + ZHU YI FEI</p>
+            <div class="footer-links">
+                <a href="cisc3003-sugEx03-home.html">Home</a> | 
+                <a href="cisc3003-sugEx03-profile.html">Profile</a> | 
+                <a href="cisc3003-sugEx03-profile.html#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 补充回到顶部按钮，与其他页面统一 -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- 补充JS交互逻辑，与其他页面统一 -->
+    <script>
+        // 回到顶部按钮逻辑
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // 锚点平滑滚动
+        document.addEventListener('click', function(e) {
+            if (e.target.matches('a[href^="#"]')) {
+                e.preventDefault();
+                const targetId = e.target.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+
+        // 移动端下拉菜单兼容
+        if (window.innerWidth <= 768) {
+            document.querySelectorAll('.dropdown').forEach(dropdown => {
+                dropdown.addEventListener('click', function(e) {
+                    const menu = this.querySelector('.dropdown-menu');
+                    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+
+h1, h2, h3, nav, footer {
+    font-family: Lobster, Cambria, serif;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    background-color: #E8EAF6;
+    margin: 0;
+}
+
+header {
+    color: white;
+    background-color: #1A237E;
+    margin: 0 4em 0.25em 4em;
+    padding: 0.5em 0;
+}
+header h1 { 
+    padding: 0.5rem 0 0 1.25rem;
+    font-size: 2.2rem;
+    margin: 0;
+}
+header p { 
+    font-size: 1rem;
+    font-style: italic;
+    margin: 0.25rem 0 1rem 1.25rem;
+}
+
+main {
+    background-color: white;
+    margin: 1em 4em;
+    padding: 1.5em;
+}
+fieldset {
+    margin: 0;
+    background-color: #C5CAE9;
+    border: none;
+    padding: 0;
+}
+legend { 
+    font-size: 1.4rem;
+    background-color: #7986CB;
+    color: white;
+    width: 100%;
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+td {
+    padding: 10px 20px;
+    vertical-align: top;
+}
+label {
+    font-weight: 600;
+}
+
+input[type="text"], textarea, select, input[type="number"], input[type="date"], input[type="time"] {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #9FA8DA;
+    box-sizing: border-box;
+}
+
+
+input[type="radio"], input[type="checkbox"] {
+    accent-color: #0080ff;
+}
+
+.dashed-box {
+    border: 1px solid #9FA8DA;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+.col-left {
+    width: 45%;
+    padding-right: 40px;
+}
+.col-right {
+    width: 55%;
+}
+.col-item {
+    margin-bottom: 15px;
+}
+
+.color-bar {
+    background-color: #9FA8DA;
+    padding: 12px 20px;
+    margin: 5px 0;
+}
+
+.rounded {
+    border-radius: 8px;
+    padding: 0.75em 1em;
+    background-color: #E91E63;
+    color: white;
+    border: none;
+    width: 120px; 
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px grey;
+}
+.rounded:hover {
+    background-color: #C2185B;
+    box-shadow: 0 6px 8px rgba(194, 24, 91, 0.4);
+}

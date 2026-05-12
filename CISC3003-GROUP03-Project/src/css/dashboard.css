@@ -1,0 +1,626 @@
+/* Dashboard Grid Layout */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 15px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 10% 20%, rgba(16, 185, 129, 0.08) 0%, transparent 80%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+/* Hover Effect for Stat Card */
+.stat-card:hover {
+    transform: translateY(-8px);
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card:hover::before {
+    opacity: 1;
+}
+
+/* Gradient Highlight Card - Fixed color, no theme change */
+.stat-card.gradient {
+    background: linear-gradient(135deg, #98e5db 0%, #06b6d4 100%);
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Shimmer Animation for Gradient Card */
+.stat-card.gradient::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+    opacity: 0.5;
+    animation: gradientShimmer 8s infinite linear;
+}
+
+@keyframes gradientShimmer {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* White text for gradient card (fixed) */
+.stat-card.gradient h3, 
+.stat-card.gradient p {
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+/* Stat Card Header Style */
+.stat-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.stat-header p {
+    color: var(--text-primary);
+}
+
+/* Icon Pulse Animation */
+.stat-header .icon {
+    width: 24px;
+    height: 24px;
+    stroke-width: 1.5;
+    animation: iconPulse 3s infinite ease-in-out;
+}
+
+@keyframes iconPulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.1); opacity: 1; }
+}
+
+/* Main number text - theme variable for light/dark mode */
+.stat-card h3 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    letter-spacing: -1px;
+    color: var(--text-primary);
+}
+
+/* Gradient card number style */
+.stat-card.gradient h3 {
+    background: linear-gradient(to right, #fff, #f3f4f6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Secondary text - theme variable for light/dark mode */
+.stat-date, .stat-info {
+    font-size: 14px;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover .stat-date,
+.stat-card:hover .stat-info {
+    color: var(--text-primary);
+}
+
+/* Overview Section Grid */
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+/* Content Card - theme variables applied */
+.card {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: var(--border-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Title - theme variable */
+.card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    position: relative;
+    padding-bottom: 12px;
+    color: var(--text-primary);
+}
+
+/* Title Decorative Line */
+.card h4::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(to right, #98e5db, #06b6d4);
+    border-radius: 2px;
+}
+
+/* Overview Stats Layout */
+.overview-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.overview-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Circular Stat Icon */
+.overview-circle {
+    width: 72px;
+    height: 72px;
+    border-radius: 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+    font-size: 24px;
+    font-weight: 700;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+}
+
+.overview-circle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(0,0,0,0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overview-item:hover .overview-circle {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.overview-item:hover .overview-circle::before {
+    opacity: 1;
+}
+
+/* Circular Stat Color Variants */
+.overview-circle.teal {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
+    color: #98e5db;
+}
+
+.overview-circle.green {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(34, 197, 94, 0.05) 100%);
+    color: #98e5db;
+}
+
+.overview-circle.red {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(239, 68, 68, 0.05) 100%);
+    color: #eeb58f;
+}
+
+/* Overview Item Text - theme variable */
+.overview-item p {
+    font-size: 12px;
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+    white-space: nowrap;
+    text-align: center;
+    width: 100%;
+}
+
+.overview-item:hover p {
+    color: var(--text-primary);
+}
+
+/* Financial Health Stats */
+.health-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.health-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* Health Header Text - theme variables */
+.health-header span:first-child {
+    color: var(--text-secondary);
+}
+
+.health-header span:last-child {
+    color: var(--text-primary);
+}
+
+/* Progress Bar - theme variable for background */
+.progress-bar {
+    height: 10px;
+    background-color: var(--bg-tertiary);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+    position: relative;
+}
+
+/* Progress Bar Shine Animation */
+.progress-bar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0,0,0,0.2), transparent);
+    animation: progressShine 2s infinite linear;
+}
+
+@keyframes progressShine {
+    0% { left: -100%; }
+    100% { left: 200%; }
+}
+
+/* Progress Fill Style */
+.progress-fill {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 1s cubic-bezier(0.65, 0, 0.35, 1);
+    position: relative;
+}
+
+.progress-fill.gradient {
+    background: linear-gradient(to right, #98e5db, #3b82f6);
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+}
+
+.progress-fill.red {
+    background: linear-gradient(to right, #eeb58f, #f87171);
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+}
+
+/* Transactions List Container */
+.transactions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Transaction Item - theme variables applied */
+.transaction-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Transaction Item Left Border Indicator */
+.transaction-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(to bottom, #98e5db, #06b6d4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.transaction-item.expense::before {
+    background: linear-gradient(to bottom, #eeb58f, #f87171);
+}
+
+/* Transaction Item Hover Effect */
+.transaction-item:hover {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+    transform: scale(1.01);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-item:hover::before {
+    opacity: 1;
+}
+
+/* Transaction Icon Style */
+.transaction-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.transaction-item:hover .transaction-icon {
+    transform: scale(1.1);
+}
+
+/* Income/Expense Icon Colors */
+.transaction-icon.income {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(34, 197, 94, 0.05) 100%);
+    color: #98e5db;
+}
+
+.transaction-icon.expense {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(239, 68, 68, 0.05) 100%);
+    color: #eeb58f;
+}
+
+/* Transaction Title - theme variable */
+.transaction-info h5 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.transaction-item:hover .transaction-info h5 {
+    color: #98e5db;
+}
+
+.transaction-item.expense:hover .transaction-info h5 {
+    color: #eeb58f;
+}
+
+/* Transaction Date - theme variable */
+.transaction-info p {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* Transaction Amount - theme variable */
+.transaction-amount {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+/* Expense Amount Red (fixed) */
+.transaction-item.expense .transaction-amount {
+    color: #ef4444;
+}
+
+.transaction-item:hover .transaction-amount {
+    transform: translateX(-4px);
+}
+
+/* Responsive Mobile Styles */
+@media (max-width: 767px) {
+    .overview-grid { grid-template-columns: 1fr !important;}
+    .stat-card { padding: 20px; }
+    .card { padding: 24px; }
+    .overview-stats { gap: 16px; }
+    .overview-circle { width: 64px; height: 64px; }
+}
+
+
+.overview-dark-card {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important; 
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+
+.overview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.overview-header h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.overview-month {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+
+.overview-top-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.overview-stat .stat-number {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+.overview-stat p {
+    margin: 0;
+    color: #aaa;
+    font-size: 0.85rem;
+}
+
+
+.overview-calendar {
+    margin-top: 1rem;
+}
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.3rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: #777;
+    font-size: 0.8rem;
+}
+.calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.3rem;
+}
+.date-item {
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    color: #ddd;
+    cursor: default;
+}
+.date-item.active {
+    background-color: #ffb79f; 
+    color: #1a1a1a; 
+    font-weight: 500;
+}
+.date-item:hover:not(.active) {
+    background-color: #2a2a2a;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+
+.overview-dark-card {
+  background: #151823;
+  color: #fff;
+  border-radius: 16px;
+  padding: 20px;
+}
+.overview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.overview-month {
+  color: #8a8d99;
+  font-size: 14px;
+}
+.overview-top-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.overview-stat .stat-number {
+  font-size: 22px;
+  font-weight: 600;
+}
+.overview-stat p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #8a8d99;
+}
+
+
+.overview-calendar {
+  width: 100%;
+}
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-size: 12px;
+  color: #8a8d99;
+  margin-bottom: 8px;
+}
+.calendar-dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+.date-item {
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  border-radius: 6px;
+  position: relative;
+  cursor: default;
+}
+.date-item.empty {
+  background: transparent;
+}
+
+
+.date-item.income::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #98e5db; 
+}
+.date-item.expense::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #eeb58f; 
+}
+/* 同一天既有收入又有支出 */
+.date-item.income.expense::after {
+  background: #98e5db;
+  box-shadow: 8px 0 0 #eeb58f;
+}

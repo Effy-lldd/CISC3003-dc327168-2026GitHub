@@ -1,0 +1,286 @@
+@charset "UTF-8";
+
+#values, #career, #interests, #blog, #contact {
+    height: auto !important;
+    min-height: fit-content;
+    margin: 4rem 10rem; /* 保持与主页一致的左右页边距 */
+    padding-top: 2rem;
+}
+
+/* 标题样式对齐主页 */
+.title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* 移除原有 header 的内边距影响（如果有的话） */
+body {
+    padding-left: 7rem; /* 必须保留，为左侧边栏留出空间 */
+}
+
+@media screen and (max-width: 1200px) {
+    #values, #career, #interests, #blog, #contact {
+        margin: 2rem 2rem;
+    }
+    body {
+        padding-left: 0;
+    }
+}
+
+
+/* 1. Values板块特有样式 */
+.values-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+    color: #555;
+}
+
+.values-content p {
+    margin-bottom: 20px;
+}
+
+/* 2. Career板块特有样式 - 左文右图布局 */
+.career-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.career-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.career-text p {
+    margin-bottom: 15px;
+}
+
+.career-img-container {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.career-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.career-img-container:hover .career-img {
+    transform: scale(1.05);
+}
+
+/* 3. Interests板块特有样式 - 双图+文本布局 */
+.interests-top-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.interests-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.ih-vertical-container {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.ih-vertical-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.ih-vertical-container:hover .ih-vertical-img {
+    transform: scale(1.05);
+}
+
+.ih-horizontal-container {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.ih-horizontal-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.ih-horizontal-container:hover .ih-horizontal-img {
+    transform: scale(1.05);
+}
+
+/* 4. Blog板块特有样式 */
+.blog-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.blog-post {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+.blog-post h3 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.blog-date {
+    color: #7f8c8d;
+    font-style: italic;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.blog-link {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.blog-link:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}
+
+/* 5. Contact板块特有样式 - 左信息右表单 */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.contact-info {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.contact-info p {
+    margin-bottom: 20px;
+}
+
+.contact-info a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form label {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.contact-form button {
+    padding: 12px 30px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+.contact-form button:hover {
+    background-color: #3498db;
+}
+
+/* 响应式适配 - 移动端优化 */
+@media (max-width: 768px) {
+    /* 所有布局改为单列 */
+    .career-content, 
+    .interests-top-content, 
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* 图片容器适配移动端 */
+    .career-img-container,
+    .ih-vertical-container {
+        max-width: 100%;
+    }
+
+    .ih-horizontal-container {
+        height: 200px;
+    }
+
+    /* 表单按钮居中 */
+    .contact-form button {
+        align-self: center;
+        width: 100%;
+    }
+
+    /* 文本字号适配 */
+    .values-content,
+    .career-text,
+    .interests-text,
+    .blog-content,
+    .contact-info {
+        font-size: 1rem;
+    }
+
+    .blog-post h3 {
+        font-size: 1.2rem;
+    }
+}

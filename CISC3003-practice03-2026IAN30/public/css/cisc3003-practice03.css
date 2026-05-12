@@ -1,0 +1,243 @@
+/* 全局基础样式 */
+body {
+    background-color: #E8EAF6;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+/* 标题使用无衬线字体 */
+h1, h2, h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* 头部区域 */
+header {
+    background-color: #1A237E;
+    color: white;
+    padding: 0 ;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+header h1 {
+    font-size: 1.8em;
+    padding: 0 20px;
+}
+
+/* 导航栏 */
+header nav {
+    background-color: #3F51B5;
+    margin-top: 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding-left: 5px;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li a {
+    display: block;
+    padding: 8px 8px;
+    color: #00B0FF;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+header nav ul li a:hover {
+    background-color: #F50057;
+    color: #00B0FF;
+    text-decoration: underline;
+}
+
+/* 全局链接样式 */
+a {
+    color: #00B0FF;
+    text-decoration: underline;
+}
+
+a:hover {
+    background-color: #F50057;
+    color: #00B0FF;
+    text-decoration: underline;
+}
+
+a:hover {
+    background-color: #F50057;
+    color: #00B0FF;
+    text-decoration: underline;
+}
+
+
+/* 主内容区 */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+.main-container {
+    background-color: white;
+    padding: 20px 20px 20px; 
+    margin: 0;
+}
+
+/* 每个内容区块 */
+main section {
+    background-color: white;
+    margin-bottom: 20px;
+    border: 1px solid #C5CAE9;
+    padding: 0;
+}
+
+/* 区块标题 */
+main section h3 {
+    background-color: #7986CB;
+    color: white;
+    padding: 8px 12px;
+    font-size: 1.1em;
+}
+
+main section h2 {
+    background-color: #7986CB;
+    color: white;
+    padding: 15px 15px;
+    font-size: 1.1em;
+}
+
+/* 区块内容 */
+main section > div {
+    padding: 0;
+}
+
+.description-content {
+    
+    padding-top: 15px; 
+    padding-bottom: 3px;
+    margin: 0;
+}
+
+.description-content p {
+  line-height: 1.0;
+  margin-bottom: 10px;
+}
+
+
+.description-img {
+    padding: 0;
+    margin: 0;
+}
+.description-img figure {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 大图和说明 */
+
+figure {
+    margin: 15px 0;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+figcaption {
+    text-align: left;
+    padding: 10px 0;
+    color: #666;
+    background-color: #C5CAE9;
+    padding: 15px;
+    font-family: inherit;
+    font-style: italic;
+}
+
+/* 相关照片容器 */
+.related-container {
+    gap: 1%;
+    padding-top:0 !important;
+    padding-left: 0 !important; 
+    padding-bottom: 3px;
+    margin: 0;
+}
+
+
+
+/* 评论区 */
+.review-item {
+    margin: 0;
+    padding:15px;
+    font-family: inherit;
+    border-bottom: 1.5px solid #808080;
+    box-shadow: 0 2px 3px -2px rgba(0, 0, 0, 0.2);
+}
+
+.review-content {
+	padding-bottom:15px !important;
+
+}
+
+.review-author {
+    color: #7986CB;
+    font-style: italic;
+}
+
+
+.review-item time {
+    color: #FF80AB;
+    font-style: italic;
+}
+
+
+.review-item em {
+    font-style: italic;
+}
+
+hr {
+    border: none;
+    border-top: 1.5px dotted #C5CAE9;
+}
+
+/* 页脚 */
+footer {
+    background-color: #1A237E;
+    color: white;
+    padding: 0;
+    text-align: left;
+    font-size: 0.9em;
+    max-width: 800px;
+    margin: 20px auto;
+    margin-bottom:0 !important;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.footer-content {
+	padding: 15px;
+}
+
+footer a {
+    color: #00B0FF;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    background-color: #F50057;
+    color: #00B0FF;
+    text-decoration: underline;
+}
+
+.related-container a:hover,
+.related-container a:focus {
+    background-color: transparent !important;
+    /* 如果你想讓其他 hover 效果也消失，可以加下面兩行 */
+    /* color: inherit; */
+    /* text-decoration: none; */
+}
