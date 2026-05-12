@@ -1,0 +1,13 @@
+.container{
+    width:600px;
+}
+.info-box{
+    background:#e9f5ff;
+    padding:20px;
+    border-radius:6px;
+    margin:20px 0;
+    line-height:1.8;
+}
+.logout-btn{
+    background:#dc3545;
+}

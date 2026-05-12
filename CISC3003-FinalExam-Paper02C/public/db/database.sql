@@ -1,0 +1,14 @@
+CREATE DATABASE IF NOT EXISTS cisc3003_c;
+USE cisc3003_c;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    fullname VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    activate_token VARCHAR(255) NULL,
+    is_activated TINYINT(1) DEFAULT 0,
+    reset_token VARCHAR(255) NULL,
+    reset_expire DATETIME NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
